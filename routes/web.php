@@ -25,4 +25,4 @@ Route::get('upload', 'ImportController@importExportView')->name('upload');
 Route::get('export', 'ImportController@export')->name('export');
 Route::post('import', 'ImportController@import')->name('import');
 Route::get('/phones', 'HomeController@phones')->name('phones');
-Route::get('/send', 'HomeController@phones')->name('send');
+Route::post('/send', 'HomeController@sendSMS')->name('send');

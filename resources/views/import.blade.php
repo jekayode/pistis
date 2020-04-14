@@ -8,12 +8,7 @@
         <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
 
             <div class="row">
-                @if(session()->has('message'))
-                <div class="alert alert-success" role="alert">
-                    {{ session()->get('message') }}
-                  </div>
-
-            @endif
+                @include('messages')
             </div>
             <div class="row">
 

@@ -16,6 +16,9 @@
         @include('sidebar')
         <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
             <div class="row">
+                @include('messages')
+            </div>
+            <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="db-pageheader">
                         <h2 class="db-pageheader-title">Dashboard</h2>
@@ -76,6 +79,8 @@
                 </div>
             </div>
 
+
+
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="db-pageheader">
@@ -101,7 +106,7 @@
                                         </th>
                                         <th>Phone</th>
                                         <th>Code</th>
-                                        <th>State</th>
+                                        <th>Status</th>
                                         <th data-orderable="false">Action</th>
                                     </tr>
                                 </thead>
@@ -121,11 +126,38 @@
                                                 <p class="invoice-table-price">{{ $phone->code }}</p>
                                             </td>
                                             <td>
-                                                <p class="invoice-table-date">{{ $phone->status }}</p>
+                                                <div class="listing-table-status">
+                                                    @if($phone->status == 'Pending')
+
+                                                <span class="badge badge-warning">Pending</span>
+                                                @else
+                                                <span class="badge badge-success">Sent</span>
+                                                @endif
+                                                </div>
+
                                             </td>
                                             <td>
+
+                                                <div class="listing-table-status">
+                                                    @if($phone->status == 'Pending')
+
+                                                    <form id="logout-form" action="{{ route('send') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" value="{{ $phone->code }}" name="code">
+                                                        <input type="hidden" value="{{ $phone->phone }}" name="phone">
+                                                        <button type="submit" class="btn btn-primary btn-sm">Send SMS</button>
+
+                                                    </form>
+                                                @else
+                                                <span class="badge badge-success">Message Sent</span>
+                                                @endif
+                                                </div>
+
                                                 <div class="invoice-table-action">
-                                                    <a class="dropdown-item" href="#">Send SMS</a>
+
+
+
+
                                                 </div>
                                             </td>
                                         </tr>
