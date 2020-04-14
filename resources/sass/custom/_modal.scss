@@ -1,0 +1,38 @@
+/* payment modal  */
+
+.payment-gatway.modal {
+	.modal-body {
+		padding: 35px;
+		.heading-title {
+			font-weight: 700;
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+	}
+}
+.payment-gatway {
+	.image {
+		background-position: center center;
+		background-color: transparent;
+		border: 2px solid #e6e6e6;
+		border-radius: 10px;
+		padding: 0px 16px;
+	}
+	input[type="radio"] {
+		box-sizing: border-box;
+		padding: 0;
+		display: none !important;
+	}
+	input[type="checkbox"] {
+		box-sizing: border-box;
+		padding: 0;
+		display: none !important;
+	}
+	[type="radio"] {
+		&:checked+label {
+			.image {
+				border: 2px solid #2841f8;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/* icon-shape */
+
+.icon-xs {
+}
+
+.icon-sm {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+}
+
+.icon-lg {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+}
+
+.icon-xl {
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+}
+
+.icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}

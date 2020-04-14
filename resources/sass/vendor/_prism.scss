@@ -1,0 +1,158 @@
+/* prism */
+
+code[class*="language-"] {
+	color: $gray-300;
+	background: none;
+	font-family: $font-family-sans-serif;
+	font-size: 14px;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	border-radius: 5px;
+}
+pre[class*="language-"] {
+	color: $gray-300;
+	background: none;
+	font-family: $font-family-sans-serif;
+	font-size: 14px;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	border-radius: 5px;
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	background: #322e3f;
+}
+not(pre) {
+	> code[class*="language-"] {
+		background: #322e3f;
+		padding: 0.1em;
+		border-radius: 0.3em;
+		white-space: normal;
+	}
+}
+.token.comment {
+	color: $gray-900;
+}
+.token.block-comment {
+	color: $gray-900;
+}
+.token.prolog {
+	color: $gray-900;
+}
+.token.doctype {
+	color: $gray-900;
+}
+.token.cdata {
+	color: $gray-900;
+}
+.token.punctuation {
+	color: $gray-300;
+}
+.token.tag {
+	color: $red;
+}
+.token.attr-name {
+	color: $red;
+}
+.token.namespace {
+	color: $red;
+}
+.token.deleted {
+	color: $red;
+}
+.token.function-name {
+	color: $info;
+}
+.token.boolean {
+	color: $orange;
+}
+.token.number {
+	color: $orange;
+}
+.token.function {
+	color: $orange;
+}
+.token.property {
+	color: $warning;
+}
+.token.class-name {
+	color: $warning;
+}
+.token.constant {
+	color: $warning;
+}
+.token.symbol {
+	color: $warning;
+}
+.token.selector {
+	color: $red;
+}
+.token.important {
+	color: $red;
+	font-weight: bold;
+}
+.token.atrule {
+	color: $red;
+}
+.token.keyword {
+	color: $red;
+}
+.token.builtin {
+	color: $red;
+}
+.token.string {
+	color: $success;
+}
+.token.char {
+	color: $success;
+}
+.token.attr-value {
+	color: $success;
+}
+.token.regex {
+	color: $success;
+}
+.token.variable {
+	color: $success;
+}
+.token.operator {
+	color: $info;
+}
+.token.entity {
+	color: $info;
+	cursor: help;
+}
+.token.url {
+	color: $info;
+}
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.inserted {
+	color: $success;
+}

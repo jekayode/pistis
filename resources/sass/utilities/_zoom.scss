@@ -1,0 +1,19 @@
+/* zoom-img */
+
+.zoom-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  img {
+    max-width: 100%;
+    transition: transform 0.35s ease-out;
+    transform: translate3d(0, 0, 0) scale(1);
+    image-rendering: -webkit-optimize-contrast;
+  }
+  &:hover {
+    img {
+      transform: translate3d(0, 0, 0) scale(1.08);
+      border-radius: 10px;
+    }
+  }
+}

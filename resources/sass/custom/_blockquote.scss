@@ -1,0 +1,26 @@
+/*blockquote  */
+
+.blockquote {
+  position: relative;
+  color: $black;
+  font-size: 23px;
+  line-height: 36px;
+  display: block;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  &:before {
+    padding: 17px;
+    content: "\f10d";
+    font-family: $font-awesome;
+    font-weight: 900;
+    font-size: 22px;
+    position: relative;
+    left: 45%;
+    background-color: $white;
+    height: 50px;
+    width: 50px;
+    color: $primary;
+    text-align: center;
+    bottom: 18px;
+  }
+}

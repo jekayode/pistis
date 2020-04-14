@@ -1,0 +1,225 @@
+/* listing-slider */
+
+.listing-slider {
+  .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+    border-radius: 50%;
+    left: 20%;
+    &:hover {
+      color: transparent;
+      outline: none;
+      background: transparent;
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:focus {
+      color: transparent;
+      outline: none;
+      background: transparent;
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:before {
+      color: $black;
+      font-family: $font-awesome;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 0.8;
+      opacity: 1;
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 0px 0px;
+      display: inline-block;
+      content: "\f104";
+    }
+  }
+  .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+    border-radius: 50%;
+    right: 20%;
+    &:hover {
+      color: transparent;
+      outline: none;
+      background: transparent;
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:focus {
+      color: transparent;
+      outline: none;
+      background: transparent;
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:before {
+      color: $black;
+      font-family: $font-awesome;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 0.8;
+      opacity: 1;
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 0px 0px;
+      display: inline-block;
+      content: "\f105";
+    }
+  }
+  .slick-prev.slick-disabled {
+    &:before {
+      opacity: 0.25;
+    }
+  }
+  .slick-next.slick-disabled {
+    &:before {
+      opacity: 0.25;
+    }
+  }
+  .slick-dots {
+    display: none !important;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: -2px;
+      padding: 0;
+      cursor: pointer;
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+        &:hover {
+          outline: none;
+          &:before {
+            opacity: 1;
+          }
+        }
+        &:focus {
+          outline: none;
+          &:before {
+            opacity: 1;
+          }
+        }
+        &:before {
+          font-size: 40px;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          content: "\f061";
+          text-align: center;
+          opacity: 1;
+          color: $gray-500;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+    li.slick-active {
+      button {
+        &:before {
+          opacity: 1;
+          color: $white;
+        }
+      }
+    }
+  }
+  img {
+    opacity: 0.8;
+    transition: all 300ms ease;
+  }
+  .slick-center {
+    img {
+      -moz-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+      -o-transform: scale(1.08);
+      -webkit-transform: scale(1.08);
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+}
+[dir="\f061"] {
+  .listing-slider {
+    .slick-prev {
+      right: 10px;
+      left: auto;
+      &:before {
+        content: "\f104";
+      }
+    }
+  }
+}
+[dir="\f004"] {
+  .listing-slider {
+    .slick-next {
+      right: auto;
+      left: 30px;
+    }
+  }
+}
+[dir="\f005"] {
+  .listing-slider {
+    .slick-next {
+      &:before {
+        content: ".5";
+      }
+    }
+  }
+}

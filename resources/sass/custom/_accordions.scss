@@ -1,0 +1,49 @@
+/* Accordions style 1 */
+.accordion-section {
+  background-color: transparent;
+  border: 1px solid #ebedfc;
+  padding: 45px;
+  margin-bottom: 30px;
+}
+.accrodion-regular {
+  .card {
+    margin-bottom: 10px;
+    border: 1px solid #ebedfc;
+  }
+  .card-body {
+    background-color: transparent;
+    border-top: 1px solid #ebedfc;
+  }
+  .card-header {
+    padding: 24px 20px;
+    background-color: transparent;
+    border-bottom: 0px;
+    &:first-child {
+      border-radius: calc(4px - 1px) calc(4px - 1px) 0 0;
+    }
+    a {
+      color: $white;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .card-title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    color: $dark;
+    span {
+      padding-top: 3px;
+      float: right;
+      font-size: 12px;
+    }
+  }
+  .card-header.active {
+    color: $primary;
+  }
+}
+.accordion-content {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

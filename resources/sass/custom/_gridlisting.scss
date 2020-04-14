@@ -1,0 +1,30 @@
+/* grid listing */
+
+.grid-listing.card {
+  display: flex;
+  flex-direction: row;
+}
+.grid-listing {
+  .card-img {
+    flex: 1;
+    img {
+      border-radius: 10px 0px 0px 10px;
+    }
+  }
+  .card-body {
+    flex: 1;
+    border-radius: 0px 10px 10px 0px;
+
+    border-left: transparent;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-listing.card {
+    display: inherit;
+  }
+
+  .grid-listing .card-img img {
+    border-radius: 10px 10px 0px 0px;
+  }
+}

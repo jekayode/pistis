@@ -1,0 +1,18 @@
+/* size */
+
+$sizes: 0, 1rem, 2rem, 3rem, 4rem, 5rem;
+
+@each $size in $sizes {
+  .top-#{$size} {
+    top: $size;
+  }
+  .bottom-#{$size} {
+    bottom: $size;
+  }
+  .left-#{$size} {
+    left: $size;
+  }
+  .right-#{$size} {
+    right: $size;
+  }
+}

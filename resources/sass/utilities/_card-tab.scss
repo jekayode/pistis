@@ -1,0 +1,41 @@
+/*  card tab  */
+
+.card-lines-tab {
+  .card-header {
+    border-radius: 10px;
+    border: 1px solid #eaeaf2;
+    background-color: $white;
+    padding: 0px 20px;
+    margin-bottom: 12px;
+  }
+  .card-header.nav.nav-pills {
+    .nav-item {
+      .nav-link {
+        padding: 15px 26px;
+        color: $gray-900;
+        font-weight: 500;
+        font-size: 15px;
+        border-bottom: 2px transparent;
+        margin-right: 5px;
+        &:hover {
+          color: $primary;
+          background-color: transparent;
+          border-bottom: 2px solid #2943f8;
+          border-radius: 0px;
+        }
+      }
+      .nav-link.active {
+        color: $primary;
+        background-color: transparent;
+        border-bottom: 2px solid #2943f8;
+        border-radius: 0px;
+      }
+    }
+  }
+  .card-body {
+    border-radius: 10px;
+    border: 1px solid #eaeaf2;
+    background-color: $white;
+    padding: 30px;
+  }
+}

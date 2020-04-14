@@ -1,0 +1,37 @@
+/* overlay bg */
+
+.overlay-bg {
+  position: relative;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 1;
+    border-radius: 10px;
+    background: linear-gradient(
+      to bottom,
+      rgba(35, 38, 62, 0.2) 40%,
+      rgba(35, 38, 62, 0.21) 35%,
+      rgba(35, 38, 62, 0.51) 60%,
+      rgba(35, 38, 62, 0.91) 100%
+    );
+    border-radius: 10px;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 10px;
+    padding: 5px 25px;
+    z-index: 1078;
+    width: 100%;
+  }
+}

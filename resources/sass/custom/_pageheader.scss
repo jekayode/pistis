@@ -1,0 +1,41 @@
+/* pageheader*/
+.pageheader {
+  border-radius: 10px;
+  min-height: 280px;
+  position: relative;
+  margin: 0px 15px;
+  background-size: cover;
+  &:before {
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 1;
+    border-radius: 10px;
+    background: linear-gradient(
+      to left,
+      rgba(35, 38, 62, 0.2) 0%,
+      rgba(35, 38, 62, 0.21) 0%,
+      rgba(35, 38, 62, 0.51) 33%,
+      rgba(35, 38, 62, 0.79) 100%
+    );
+    border-radius: 10px;
+  }
+}
+.pageheader-caption {
+  color: $white;
+  padding: 76px 0px 36px;
+}
+.pageheader-caption-title {
+  font-size: 44px;
+  line-height: 52px;
+  color: $white;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.pageheader-caption-text {
+  font-size: 21px;
+  line-height: 30px;
+}

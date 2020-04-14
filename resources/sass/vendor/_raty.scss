@@ -1,0 +1,90 @@
+/* raty */
+
+$font_family_1: "raty";
+
+@font-face {
+	font-family: "raty";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../docs/assets/fonts/raty/raty.eot");
+	src: url("../docs/assets/fonts/raty/raty.eot?#iefix")
+		format("embedded-opentype");
+	src: url("../docs/assets/fonts/raty/raty.svg#raty") format("svg");
+	src: url("../docs/assets/fonts/raty/raty.ttf") format("truetype");
+	src: url("../docs/assets/fonts/raty/raty.woff") format("woff");
+}
+.cancel-on-png {
+	font-size: 2em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_family_1;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	&:before {
+		content: "\e600";
+	}
+}
+.cancel-off-png {
+	font-size: 2em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_family_1;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	&:before {
+		content: "\e601";
+	}
+}
+.star-on-png {
+	font-size: 2em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_family_1;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	&:before {
+		content: "\f005";
+	}
+}
+.star-off-png {
+	font-size: 2em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_family_1;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	&:before {
+		content: "\f006";
+	}
+}
+.star-half-png {
+	font-size: 2em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_family_1;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-transform: none;
+	&:before {
+		content: "\f123";
+	}
+}

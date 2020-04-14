@@ -1,0 +1,64 @@
+/* buttons */
+
+.btn-wishlist {
+  top: 20px;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  z-index: 101;
+  right: 10px;
+  bottom: 0px;
+  cursor: pointer;
+  background-color: rgba(35, 38, 62, 0.6);
+  display: block;
+  height: 34px;
+  width: 34px;
+  border-radius: 10px;
+  transition: all 0.4s;
+  &:before {
+    transition: opacity 0.3s, transform 0.4s cubic-bezier(0, -0.41, 0.19, 2.5);
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 5px;
+    content: "\f004";
+    transform: scale(0.95);
+    font-family: $font-awesome;
+    font-weight: 400;
+  }
+  &:after {
+    transition: opacity 0.3s, transform 0.4s cubic-bezier(0, -0.41, 0.19, 2.5);
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 5px;
+    content: "\f004";
+    opacity: 0;
+    transform: scale(0.5);
+    font-family: $font-awesome;
+    font-weight: 900;
+  }
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+}
+.btn-wishlist.liked {
+  background-color: $red;
+  color: $white;
+  border-color: $red;
+  &:after {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+  &:before {
+    opacity: 0;
+  }
+}
+
+.btn-white {
+  @include button-variant($white, $white, $white, $white, $white, $white);
+  color: $black;
+}
