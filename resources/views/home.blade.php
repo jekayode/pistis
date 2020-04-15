@@ -104,6 +104,7 @@
                                                 <label class="custom-control-label" for="customCheck1"></label>
                                             </div>
                                         </th>
+                                        <th>Name</th>
                                         <th>Phone</th>
                                         <th>Code</th>
                                         <th>Status</th>
@@ -118,6 +119,9 @@
                                                     <input type="checkbox" class="custom-control-input checkboxes" id="customCheck2">
                                                     <label class="custom-control-label" for="customCheck2"></label>
                                                 </div>
+                                            </td>
+                                            <td>
+                                                <p class="invoice-table-heading"> {{ $phone->name }}</p>
                                             </td>
                                             <td>
                                                 <p class="invoice-table-heading"> {{ $phone->phone }}</p>
