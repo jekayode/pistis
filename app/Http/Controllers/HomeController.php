@@ -111,7 +111,7 @@ class HomeController extends Controller
          foreach ($pending as $phone) {
 
            var_dump($phone['id'] .' '. $phone['code']);
-           phone_number = $phone['phone'];
+           $phone_number = $phone['phone'];
            $phone_code = $phone['code'];
 
            $response = $this->sendNexmoSMS(
