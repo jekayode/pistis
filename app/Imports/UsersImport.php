@@ -19,7 +19,7 @@ class UsersImport implements ToModel, WithHeadingRow
             'name' => $row['name'],
             'phone' => $row['phone'],
             'code' => $row['code'],
-            'status' => 'pending',
+            'status' => 'Pending',
         ]);
     }
 }

@@ -31,6 +31,6 @@ class ImportController extends Controller
     public function import()
     {
         Excel::import(new UsersImport, request()->file('file'));
-        return redirect()->back()->with('message', 'Phone Imported Successfully!');
+        return redirect()->back()->with('success', 'Phone Imported Successfully!');
     }
 }
