@@ -12,13 +12,6 @@
             <div class="row">
                 <div class="card text-center">
 
-
-                    <form id="logout-form" action="{{ route('processbulk') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-primary btn-sm">Send SMS</button>
-
-                    </form>
-
                     <div class="card-body">
                     <h5 class="card-title">Total Pending
 
@@ -29,13 +22,13 @@
                     <h1 id="status"> </h1>
                                     <!-- Image loader -->
                     <div id='loader' style='display: none;'>
-                    <img src='{{ asset('img/loading.gif')}}' width='32px' height='32px'>
+                    <img src='{{ asset('img/loading.gif')}}' width='128px' height='128px'>
                     </div>
                     <!-- Image loader -->
 
                       <button type="submit" id="ajaxSubmit" class="btn btn-sm btn-warning btn-rounded">Check Pending</button>
 
-                      <button type="submit" id="creditPending" class="btn btn-sm btn-success btn-rounded">Credit Pending</button>
+                      <button type="submit" id="creditPending" class="btn btn-sm btn-success btn-rounded">Send Pending SMS</button>
                     </div>
 
                   </div>
@@ -110,8 +103,6 @@
           });
        });
 </script>
-
-
 
 @endsection
 
