@@ -19,6 +19,11 @@
         <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                @include('messages')
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="db-pageheader d-xl-flex justify-content-between">
                         <div class="">
                             <h2 class="db-pageheader-title">Phone Numbers</h2>
@@ -43,9 +48,10 @@
                                                 <label class="custom-control-label" for="customCheck1"></label>
                                             </div>
                                         </th>
+                                        <th>Name</th>
                                         <th>Phone</th>
                                         <th>Code</th>
-                                        <th>State</th>
+                                        <th>Status</th>
                                         <th data-orderable="false">Action</th>
                                     </tr>
                                 </thead>
@@ -59,17 +65,43 @@
                                                 </div>
                                             </td>
                                             <td>
+                                                <p class="invoice-table-heading"> {{ $phone->name }}</p>
+                                            </td>
+                                            <td>
                                                 <p class="invoice-table-heading"> {{ $phone->phone }}</p>
                                             </td>
                                             <td>
                                                 <p class="invoice-table-price">{{ $phone->code }}</p>
                                             </td>
                                             <td>
-                                                <p class="invoice-table-date">{{ $phone->status }}</p>
+                                                <div class="listing-table-status">
+                                                    @if($phone->status == 'Pending')
+
+                                                <span class="badge badge-warning">Pending</span>
+                                                @else
+                                                <span class="badge badge-success">Sent</span>
+                                                @endif
+                                                </div>
+
                                             </td>
                                             <td>
+
+                                                <div class="listing-table-status">
+                                                    @if($phone->status == 'Pending')
+
+                                                    <form id="logout-form" action="{{ route('send') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" value="{{ $phone->id }}" name="id">
+                                                        <button type="submit" class="btn btn-primary btn-sm">Send SMS</button>
+
+                                                    </form>
+                                                @else
+                                                <span class="badge badge-success">Message Sent</span>
+                                                @endif
+                                                </div>
+
                                                 <div class="invoice-table-action">
-                                                    <a class="dropdown-item" href="#">Send SMS</a>
+
                                                 </div>
                                             </td>
                                         </tr>

@@ -12,6 +12,13 @@
             <div class="row">
                 <div class="card text-center">
 
+
+                    <form id="logout-form" action="{{ route('processbulk') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-primary btn-sm">Send SMS</button>
+
+                    </form>
+
                     <div class="card-body">
                     <h5 class="card-title">Total Pending
 
@@ -83,7 +90,7 @@
            }
          });
           jQuery.ajax({
-             url: "{{ url('/sms/send') }}",
+             url: "{{ url('/processbulk') }}",
              method: 'post',
              beforeSend: function(){
                    // Show image container

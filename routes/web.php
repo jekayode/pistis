@@ -29,7 +29,8 @@ Route::post('/send', 'HomeController@sendSMS')->name('send');
 
 Route::get('/sendbulk', 'HomeController@sendbulk')->name('sendbulk');
 //Route::view('/sendbulk', 'sendbulk');
-Route::post('/sendbulk', 'HomeController@sendBulkSMS')->name('processSendBulk');
+Route::post('/processbulk', 'HomeController@postPendingSms')->name('processbulk');
 
 Route::post('/sms/getSmsStatus', 'HomeController@getSmsStatus');
 Route::post('/sms/send', 'HomeController@postPendingSms');
+Route::post('/sms/notify', 'NotifyController@sms');

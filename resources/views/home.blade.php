@@ -16,7 +16,9 @@
         @include('sidebar')
         <div class="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
             <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 @include('messages')
+                </div>
             </div>
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -86,7 +88,6 @@
                     <div class="db-pageheader">
                         <div class="">
                             <h2 class="db-pageheader-title">Phone Numbers </h2>
-
                         </div>
                     </div>
                 </div>
@@ -147,8 +148,7 @@
 
                                                     <form id="logout-form" action="{{ route('send') }}" method="POST">
                                                         @csrf
-                                                        <input type="hidden" value="{{ $phone->code }}" name="code">
-                                                        <input type="hidden" value="{{ $phone->phone }}" name="phone">
+                                                        <input type="hidden" value="{{ $phone->id }}" name="id">
                                                         <button type="submit" class="btn btn-primary btn-sm">Send SMS</button>
 
                                                     </form>
@@ -158,9 +158,6 @@
                                                 </div>
 
                                                 <div class="invoice-table-action">
-
-
-
 
                                                 </div>
                                             </td>
